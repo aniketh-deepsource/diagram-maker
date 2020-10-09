@@ -10,3 +10,6 @@ enabled = true
     "jest",
     "nodejs"
   ]
+  module_system = "es-modules"
+  plugins = ['react']
+
