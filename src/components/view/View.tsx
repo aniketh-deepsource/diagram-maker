@@ -263,13 +263,13 @@ class View<NodeType, EdgeType> extends Preact.Component<ViewProps<NodeType, Edge
           scale={workspaceScale}
         >
           <div className="dm-elements">
-            <svg class="dm-edges" xmlns="http://www.w3.org/2000/svg">
+            <svg className="dm-edges" xmlns="http://www.w3.org/2000/svg">
               {this.renderArrowheadMarker()}
               {this.renderEdges()}
             </svg>
             {this.renderEdgeBadges()}
             {this.renderNodes()}
-            <svg class="dm-potential-edge" xmlns="http://www.w3.org/2000/svg">
+            <svg className="dm-potential-edge" xmlns="http://www.w3.org/2000/svg">
               {this.renderPotentialEdge()}
             </svg>
           </div>
@@ -403,6 +403,8 @@ class View<NodeType, EdgeType> extends Preact.Component<ViewProps<NodeType, Edge
         id={edges[edgeKey].id}
         src={edgeCoordinates.src}
         dest={edgeCoordinates.dest}
+        srcTypeId={edgeSource.typeId}
+        destTypeId={edgeDestination.typeId}
         edgeStyle={edgeStyle}
         selected={edges[edgeKey].diagramMakerData.selected}
         showArrowhead={this.props.configService.getShowArrowhead()}
