@@ -6,9 +6,6 @@ enabled = true
 
   [analyzers.meta]
   dialect = "typescript"
-  environment = [
-    "jest"
-  ]
   module_system = "es-modules"
   plugins = ['react']
 
